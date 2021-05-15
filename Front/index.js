@@ -19,6 +19,11 @@ async function postData(url = '', data = {}) {
   form.addEventListener("submit",function(event){
       event.preventDefault();
       if(width.value==0) alert("0 value");
+      else if(width.value.includes("-"))  {
+        document.getElementById('panelQuantity').innerHTML = ``;
+        document.getElementById('paleQuantity').innerHTML = ``;
+        document.getElementById('msg').innerHTML = "message: Warring not number value";
+      }
       else{
       postData('https://ancient-everglades-30844.herokuapp.com/api/calcPanelsAndPales', { width: width.value })
       .then(data =>{
