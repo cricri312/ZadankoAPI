@@ -1,7 +1,3 @@
-// fetch('https://ancient-everglades-30844.herokuapp.com/api/getAll')
-//   .then(response => response.json())
-//   .then(data => console.log(data[0].panelQuantity));
-
 async function postData(url = '', data = {}) {
 
     const response = await fetch(url, {
@@ -41,21 +37,3 @@ async function postData(url = '', data = {}) {
           
       });}
   });
-
-  
-
-
-
-
-
-
-         
-
-         
-        
-    //     
-    //     form.addEventListener( "submit", function ( event ) {
-    //       event.preventDefault();
-    //       sendData();
-    //     } );
-    //   } );
